@@ -1,0 +1,44 @@
+.header {
+  padding: 10px;
+  border-radius: 20px;
+  background: linear-gradient(#ffeb99, #ffd633);
+  width: 800px;
+  font-family: comic;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+}
+.paragraph {
+  width: 600px;
+  font-family: comic;
+  color: black;
+  font-size: 25px;
+  text-align: center;
+}
+
+#animatetest {
+  width: 200px;
+  padding: 10px;
+  font-family: comic;
+  font-size: 25px;
+  border-radius: 5px;
+  text-align: center;
+  background: linear-gradient(#b3ffb3, #4dff4d);
+  border: none;
+}
+
+@keyframes rotate {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(360deg);}
+}
+
+#animatetest {
+	animation-name: rotate;
+    animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: forward; 
+}
+@font-face { 
+    font-family: comic; src: url('COMIC.ttf'); 
+}
