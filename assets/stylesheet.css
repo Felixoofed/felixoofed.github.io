@@ -40,5 +40,5 @@
 	animation-direction: forward; 
 }
 @font-face { 
-    font-family: comic; src: url('./COMIC.ttf'); 
+    font-family: comic; src: url('./COMIC.TTF'); 
 }
