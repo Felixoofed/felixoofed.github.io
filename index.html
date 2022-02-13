@@ -1,7 +1,7 @@
 <html lang="en-US"><head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>felixoofed's funny little website</title>
 <meta property="og:title" content="felix's funny little website">
@@ -15,6 +15,29 @@
 {"url":"https://felixoofed.github.io/","@type":"WebSite","headline":"felixoofed.github.io","name":"felixoofed.github.io","@context":"https://schema.org"}</script>
 <link rel="stylesheet" href="assets/stylesheet.css">
 
+<script>
+
+function getRandomSentence () {
+    var index= Math.floor(Math.random() * (sentences.length));
+    return sentences[index];
+}
+
+var sentences= [
+    'Hello World!',
+	'when the uh the umm yeah uh uhhh',
+	'I have no idea what i am doing!',
+	'Making all of these quotes are exhausting',
+	'Fun fact: the "refresh" button was suppose to rickroll you!',
+	'Welcome to my first website!',
+	'Among us.',
+	'hhhhhhhhhhhhh',
+	'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula ipsum ac ipsum blandit euismod. Integer auctor dolor sit amet auctor congue. Ut tempus pretium mauris, id condimentum erat semper id. Nunc dignissim neque orci. Morbi nec turpis eu enim consectetur varius eu eleifend velit.',
+	'aodufhawioefhawuoefhaiuwehfajwefnaweklfnawekfnlawkefnlaewknfakfnakjdfnd.',
+	'DID YOU??',
+	'rate 5 stars pls'
+];
+
+</script>
 </head>
 
 <center><div class="header">
@@ -22,8 +45,12 @@
 </div></center>
 
 <center><div class="paragraph">
-  <center><p id="animatetest">Hello!</p></center>
   <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula ipsum ac ipsum blandit euismod. Integer auctor dolor sit amet auctor congue. Ut tempus pretium mauris, id condimentum erat semper id. Nunc dignissim neque orci. Morbi nec turpis eu enim consectetur varius eu eleifend velit.</p>
+</div></center>
+
+<center><div class="buttons">
+  <center-left><button type="button" onclick="document.getElementById('randomnum').innerHTML = 'You got: ' + Math.floor(Math.random() * 100);" id="randomnum">Click me!</button></center-left>
+  <center-right><button type="button" onclick="document.getElementById('paragraph').innerHTML = getRandomSentence();" id="button293">Generate a new text</button></center-right>
 </div></center>
 
 <center><img src="assets/WIP.png" alt="a work in progress sign"></center>

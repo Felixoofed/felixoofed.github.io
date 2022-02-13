@@ -2,12 +2,21 @@
   padding: 10px;
   border-radius: 20px;
   background: linear-gradient(#ffeb99, #ffd633);
-  width: 800px;
   font-family: comic;
   color: black;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
+  border: none;
 }
+
+#headertext {
+  animation-name: sway;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
 .paragraph {
   width: 600px;
   font-family: comic;
@@ -16,7 +25,7 @@
   text-align: center;
 }
 
-#animatetest {
+#randomnum {
   width: 200px;
   padding: 10px;
   font-family: comic;
@@ -27,18 +36,24 @@
   border: none;
 }
 
-@keyframes rotate {
-  from {transform: rotateY(0deg);}
-  to {transform: rotateY(360deg);}
+#button293 {
+  width: 300px;
+  padding: 10px;
+  font-family: comic;
+  font-size: 25px;
+  border-radius: 5px;
+  text-align: center;
+  background: linear-gradient(#ff8080, #ff4d4d);
+  border: none;
 }
 
-#animatetest {
-	animation-name: rotate;
-    animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-	animation-direction: forward; 
+@keyframes sway {
+  from {
+  transform: rotate(-5deg);}
+  to {
+  transform: rotate(5deg);}
 }
+
 @font-face { 
-    font-family: comic; src: url('./COMIC.TTF'); 
+    font-family: comic; src: url('./COMIC.ttf'); 
 }
