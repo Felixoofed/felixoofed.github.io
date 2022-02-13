@@ -18,7 +18,6 @@
 }
 
 .paragraph {
-  width: 600px;
   font-family: comic;
   color: black;
   font-size: 25px;
@@ -55,5 +54,5 @@
 }
 
 @font-face { 
-    font-family: comic; src: url('./COMIC.ttf'); 
+    font-family: comic; src: url('./COMIC.TTF'); 
 }
