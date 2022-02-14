@@ -15,7 +15,31 @@
   border: none;
 }
 
+#SEQ {
+  border-color: #737373;
+  border-style: solid;
+  border-width: 5px;
+  padding: 10px;
+  font-family: ssmbook;
+  font-size: 35px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#divide {
+	padding: 20px;
+	font-family: ssmbook;
+	font-size: 30px;
+}
+
 #number {
+  font-family: comic;
+  font-size: 60px;
+  text-align: center;
+  border: none;
+}
+
+#strings {
   font-family: comic;
   font-size: 60px;
   text-align: center;
@@ -67,7 +91,7 @@
 .paragraph {
   font-family: comic;
   color: black;
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
 }
 

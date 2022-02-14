@@ -17,15 +17,22 @@
 
 <script>
 function getMin() {
-  const val = document.getElementById('MIN').value;
-  return val.replace("-","");
-}  
-function getMax() {
-  const val = document.getElementById('MAX').value;
+  var val = parseInt(document.getElementById('MIN').value);
   return val;
 }
 
+function getMax() {
+  var val = parseInt(document.getElementById('MAX').value)
+  return val;
+}
+
+function getStr() {
+  var val = document.getElementById('SEQ').value
+  return val;
+}
 </script>
+
+<script src="https://randojs.com/2.0.0.js"></script>
 
 </head>
 
@@ -40,10 +47,25 @@ function getMax() {
 
 <center><form class="randomform">
   <center-left><input type="number" id="MAX" name="Maximum" value="100"></center-left>
-  <center-right><input type="number" id="MIN" name="Minimal" value="-100"></center-right
+  <center-right><input type="number" id="MIN" name="Minimal" value="-100"></center-right>
 </center></form>
 
-<center><input type="button" id="randomizer" onclick="document.getElementById('number').innerHTML = Math.floor(Math.random() * getMax()*2)-getMin();" value="Randomize!"><center>
+<center><input type="button" id="randomizer" onclick="document.getElementById('number').innerHTML = rando(getMin(), getMax());" value="Randomize!"><center>
+</div>
+
+<center><p id="divide">STRING RANDOMIZATION</p></center>
+
+<div class="string">
+
+<div class="paragraph">
+  <center><p id="strings">[placeholder1]</p></center>
+</div>
+
+<center><form class="randomform2">
+  <input type="text" id="SEQ" name="Sequence" value="the lazy fox jumps over the quick brown dogs">
+</center></form>
+
+<center><input type="button" id="randomizer" onclick="document.getElementById('strings').innerHTML = randoSequence(getStr()).join('');" value="Randomize!"><center>
 </div>
 
 <center><img src="../assets/WIP.png" alt="a work in progress sign"></center>
