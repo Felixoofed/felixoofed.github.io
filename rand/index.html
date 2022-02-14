@@ -1,0 +1,50 @@
+<html lang="en-US"><head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>felixoofed's funny little website</title>
+<meta property="og:title" content="felix's funny little website">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://felixoofed.github.io/">
+<meta property="og:url" content="https://felixoofed.github.io/">
+<meta property="og:site_name" content="felixoofed.github.io">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="felixoofed.github.io">
+<script type="application/ld+json">
+{"url":"https://felixoofed.github.io/","@type":"WebSite","headline":"felixoofed.github.io","name":"felixoofed.github.io","@context":"https://schema.org"}</script>
+<link rel="stylesheet" href="../assets/stylesheet.css">
+
+<script>
+function getMin() {
+  const val = document.getElementById('MIN').value;
+  return val.replace("-","");
+}  
+function getMax() {
+  const val = document.getElementById('MAX').value;
+  return val;
+}
+
+</script>
+
+</head>
+
+<center><div class="header">
+  <h1 id="headertext">felix's funny website</h1>
+</div></center>
+
+<div class="main">
+<div class="paragraph">
+  <center><p id="number">69420</p></center>
+</div>
+
+<center><form class="randomform">
+  <center-left><input type="number" id="MAX" name="Maximum" value="100"></center-left>
+  <center-right><input type="number" id="MIN" name="Minimal" value="-100"></center-right
+</center></form>
+
+<center><input type="button" id="randomizer" onclick="document.getElementById('number').innerHTML = Math.floor(Math.random() * getMax()*2)-getMin();" value="Randomize!"><center>
+</div>
+
+<center><img src="../assets/WIP.png" alt="a work in progress sign"></center>
+</body></html>

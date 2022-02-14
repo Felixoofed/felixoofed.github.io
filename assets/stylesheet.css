@@ -9,6 +9,53 @@
   border: none;
 }
 
+.randomform {
+  padding: 10px;
+  text-align: center;
+  border: none;
+}
+
+#number {
+  font-family: comic;
+  font-size: 60px;
+  text-align: center;
+  border: none;
+}
+
+#randomizer {
+  width: -50%;
+  padding: 10px;
+  font-family: comic;
+  font-size: 25px;
+  border-radius: 5px;
+  text-align: center;
+  background: linear-gradient(#b3ffb3, #4dff4d);
+  border: none;
+}
+
+#MIN {
+  width: 150px;
+  border-color: #737373;
+  border-style: solid;
+  border-width: 5px;
+  padding: 10px;
+  font-family: ssmbook;
+  font-size: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+#MAX {
+  width: 150px;
+  border-color: #737373;
+  border-style: solid;
+  border-width: 5px;
+  padding: 10px;
+  font-family: ssmbook;
+  font-size: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
 #headertext {
   animation-name: sway;
   animation-duration: 1s;
@@ -25,7 +72,7 @@
 }
 
 #randomnum {
-  width: 200px;
+  width: -50%;
   padding: 10px;
   font-family: comic;
   font-size: 25px;
@@ -35,7 +82,7 @@
   border: none;
 }
 
-#button293 {
+#randomsent {
   width: 300px;
   padding: 10px;
   font-family: comic;
@@ -50,9 +97,13 @@
   from {
   transform: rotate(-5deg);}
   to {
-  transform: rotate(5deg);}
+  transform: rotate(5deg)}
 }
 
 @font-face { 
     font-family: comic; src: url('./COMIC.TTF'); 
+}
+
+@font-face { 
+    font-family: ssmbook; src: url('./GothamSSm-Book.otf'); 
 }
