@@ -1,4 +1,4 @@
-<html lang="en-US"><head>
+<html5 lang="en-US"><head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +14,8 @@
 <script type="application/ld+json">
 {"url":"https://felixoofed.github.io/","@type":"WebSite","headline":"felixoofed.github.io","name":"felixoofed.github.io","@context":"https://schema.org"}</script>
 <link rel="stylesheet" href="../assets/stylesheet.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
+<script src="./app.js"></script>
 
 </head>
 
@@ -21,9 +23,12 @@
   <button id="headertext">felix's funny website</button>
 </div></center>
 
-<center><canvas id="canvas" >if your seeing this, your browser sucks</canvas><script src="./app.js"></script>
+<center><div class="buttons">
+  <center><input type="color" id="colorpicker" value="#000000"></input></center>
+</center>
 
-<center><div class="colorpick">
-  <input type="color" id="colorpicker" value="#000000"></input>
+<center><div class="maincontainer">
+   <center-right><canvas id="canvas" >if your seeing this, your browser sucks</canvas></center-right>
 </div></center>
+
 </body></html>

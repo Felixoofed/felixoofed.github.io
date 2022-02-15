@@ -14,8 +14,10 @@
 }
 #canvas {
 	border-radius: 10px;
-	margin-top: 20px;
+	margin-top: 5px;
 	box-shadow: 0px 0px 5px;
+	padding: 0px;
+	cursor: crosshair;
 }
 .randomform {
   padding: 10px;
@@ -48,6 +50,7 @@
 #colorpicker {
   width: 100px;
   height: 100px;
+  margin-top: 10px;
   border-color: #737373;
   border-style: solid;
   border-width: 5px;
