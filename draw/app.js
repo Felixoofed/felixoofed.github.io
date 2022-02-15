@@ -45,8 +45,8 @@ window.onload = function() {
 
 			context.beginPath();
 			context.moveTo(
-				e.touches[0].pageX/0.5,
-				e.touches[0].pageY*0.5
+				e.touches[0].pageX/1,
+				e.touches[0].pageY*1
 			);
 
 			this.started = true;
@@ -56,12 +56,12 @@ window.onload = function() {
 
 			if (this.started) {
 				context.lineTo(
-					e.touches[0].pageX/0.5,
-					e.touches[0].pageY*0.5
+					e.touches[0].pageX/1,
+					e.touches[0].pageY*1
 				);
 
 				context.strokeStyle = document.getElementById('colorpicker').value;
-				context.lineWidth = 5;
+				context.lineWidth = 3;
 				context.stroke();
 			}
 
