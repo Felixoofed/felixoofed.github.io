@@ -19,14 +19,14 @@ window.onload = function() {
 		.mousedown(function(e){
 			isDown = true;
 			context.beginPath();
-			canvasX = e.pageX - canvas.offsetLeft;
-			canvasY = e.pageY - canvas.offsetTop;
+			canvasX = e.pageX - canvas.offsetLeft/1;
+			canvasY = e.pageY - canvas.offsetTop/1;
 			context.moveTo(canvasX, canvasY);
 		})
 		.mousemove(function(e){
 			if(isDown !== false) {
-				canvasX = e.pageX - canvas.offsetLeft;
-				canvasY = e.pageY - canvas.offsetTop;
+				canvasX = e.pageX - canvas.offsetLeft/1;
+				canvasY = e.pageY - canvas.offsetTop/1;
 				context.lineTo(canvasX, canvasY);
 				context.strokeStyle = document.getElementById('colorpicker').value;
 				context.stroke();
@@ -45,8 +45,8 @@ window.onload = function() {
 
 			context.beginPath();
 			context.moveTo(
-				e.touches[0].pageX/2,
-				e.touches[0].pageY*2
+				e.touches[0].pageX/0.5,
+				e.touches[0].pageY*0.5
 			);
 
 			this.started = true;
@@ -56,8 +56,8 @@ window.onload = function() {
 
 			if (this.started) {
 				context.lineTo(
-					e.touches[0].pageX/2,
-					e.touches[0].pageY*2
+					e.touches[0].pageX/0.5,
+					e.touches[0].pageY*0.5
 				);
 
 				context.strokeStyle = document.getElementById('colorpicker').value;
