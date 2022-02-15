@@ -28,7 +28,7 @@ window.onload = function() {
 				canvasX = e.pageX - canvas.offsetLeft;
 				canvasY = e.pageY - canvas.offsetTop;
 				context.lineTo(canvasX, canvasY);
-				context.strokeStyle = "#000";
+				context.strokeStyle = document.getElementById('colorpicker').value;
 				context.stroke();
 			}
 		})
@@ -45,8 +45,8 @@ window.onload = function() {
 
 			context.beginPath();
 			context.moveTo(
-				e.touches[0].pageX,
-				e.touches[0].pageY
+				e.touches[0].pageX/2,
+				e.touches[0].pageY/2
 			);
 
 			this.started = true;
@@ -56,11 +56,11 @@ window.onload = function() {
 
 			if (this.started) {
 				context.lineTo(
-					e.touches[0].pageX,
-					e.touches[0].pageY
+					e.touches[0].pageX/2,
+					e.touches[0].pageY/2
 				);
 
-				context.strokeStyle = "#000";
+				context.strokeStyle = document.getElementById('colorpicker').value;
 				context.lineWidth = 5;
 				context.stroke();
 			}
