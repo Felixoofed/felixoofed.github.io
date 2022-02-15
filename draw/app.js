@@ -46,7 +46,7 @@ window.onload = function() {
 			context.beginPath();
 			context.moveTo(
 				e.touches[0].pageX/2,
-				e.touches[0].pageY/2
+				e.touches[0].pageY*2
 			);
 
 			this.started = true;
@@ -57,7 +57,7 @@ window.onload = function() {
 			if (this.started) {
 				context.lineTo(
 					e.touches[0].pageX/2,
-					e.touches[0].pageY/2
+					e.touches[0].pageY*2
 				);
 
 				context.strokeStyle = document.getElementById('colorpicker').value;
@@ -77,7 +77,5 @@ window.onload = function() {
 	canvas.addEventListener('touchmove', draw.move, false);
 	
 	// Disable Page Move
-	document.body.addEventListener('touchmove',function(e){
-		e.preventDefault();
-	},false);
+	document.body.addEventListener('touchmove', function(e){ e.preventDefault(); }, { passive: false });
 };
