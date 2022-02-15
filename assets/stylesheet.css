@@ -9,9 +9,22 @@
   border: none;
 }
 
+.header2 {
+  padding: 5px;
+  width: 900px;
+  border-radius: 20px;
+  background: linear-gradient(#ffeb99, #ffd633);
+  font-family: comic;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+}
+
 .colorpick {
 	margin-top: 10px;
 }
+
 #canvas {
 	border-radius: 10px;
 	margin-top: 5px;
@@ -110,6 +123,22 @@
   font-size: 40px;
   border-radius: 10px;
   text-align: center;
+}
+
+#headertext2 {
+  padding: 10px;
+  background-color: Transparent;
+  font-family: comic;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  
+  animation-name: sway;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
 }
 
 #headertext {
