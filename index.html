@@ -1,7 +1,7 @@
 <html lang="en-US"><head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>felixoofed's funny little website</title>
 <meta property="og:title" content="felix's funny little website">
@@ -22,6 +22,20 @@ function getRandomSentence () {
     return sentences[index];
 }
 
+function print (str) {
+	console.log(str);
+}
+function redir (argument) {
+	var newUrl = argument
+	
+	if (argument.startsWith("/")) {
+		newUrl = "https://felixoofed.github.io".concat(argument);
+		window.location.href = newUrl;
+	} else {
+		newUrl = "https://felixoofed.github.io/".concat(argument);
+		window.location.href = newUrl;
+	}
+}
 var sentences= [
     'Hello World!',
 	'when the uh the umm yeah uh uhhh',
@@ -46,15 +60,20 @@ var sentences= [
   <button id="headertext">felix's funny website</button>
 </div></center>
 
-<center><div class="paragraph">
-  <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula ipsum ac ipsum blandit euismod. Integer auctor dolor sit amet auctor congue. Ut tempus pretium mauris, id condimentum erat semper id. Nunc dignissim neque orci. Morbi nec turpis eu enim consectetur varius eu eleifend velit.</p>
+<center><div class="main">
+	  <center><div class="paragraph">
+		<p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula ipsum ac ipsum blandit euismod. Integer auctor dolor sit amet auctor congue. Ut tempus pretium mauris, id condimentum erat semper id. Nunc dignissim neque orci. Morbi nec turpis eu enim consectetur varius eu eleifend velit.</p>
+	  </div></center>
+  
+	  <center><div class="buttons">
+		<center-left><button type="button" onclick="document.getElementById('randomnum').innerHTML = 'You got: ' + Math.floor(Math.random() * 100);" id="randomnum">Click me!</button></center-left>
+		<center-right><button type="button" onclick="document.getElementById('paragraph').innerHTML = getRandomSentence();" id="randomsent">Generate a new text</button></center-right>
+	  </div></center>
+</center></div>
+
+<center><div class="right">
+	<input type="text" id="page"></input>
+	<center><button type="button" onclick="redir(document.getElementById('page').value);" id="greenbutton">Go to page</button></center-left></center>
+	<center><img src="assets/WIP.png" id="wip" alt="It is a"></center>
 </div></center>
-
-<center><div class="buttons">
-  <center-left><button type="button" onclick="document.getElementById('randomnum').innerHTML = 'You got: ' + Math.floor(Math.random() * 100);" id="randomnum">Click me!</button></center-left>
-  <center-right><button type="button" onclick="document.getElementById('paragraph').innerHTML = getRandomSentence();" id="randomsent">Generate a new text</button></center-right>
-</div></center>
-
-<center><img src="assets/WIP.png" alt="a work in progress sign"></center>
-
 </body></html>

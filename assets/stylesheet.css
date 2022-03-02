@@ -50,14 +50,16 @@
 }
 
 #greenbutton {
-  width: 100px;
-  height: 100px;
+  width: 300%;
+  padding: 10px;
   border-radius: 5px;
   font-size: 25px;
   font-family: comic;
   background: linear-gradient(#b3ffb3, #4dff4d);
   text-align: center;
   border: none;
+  float: none;
+  margin-top: 10px;
 }
 
 #colorpicker {
@@ -102,6 +104,20 @@
   border: none;
 }
 
+@media only screen and (max-width: 600px) {
+  .right {
+    display: none;
+  }
+  .main {
+    width: 100%;
+    float: none;
+  }
+}
+
+#wip {
+  width: 300%;
+  height: auto;
+}
 #MIN {
   width: 150px;
   border-color: #737373;
@@ -113,6 +129,19 @@
   border-radius: 10px;
   text-align: center;
 }
+
+#PAGE {
+  width: 300%;
+  border-color: #737373;
+  border-style: solid;
+  border-width: 5px;
+  padding: 10px;
+  font-family: ssmbook;
+  font-size: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
 #MAX {
   width: 150px;
   border-color: #737373;
@@ -162,6 +191,20 @@
   color: black;
   font-size: 30px;
   text-align: center;
+}
+
+.main {
+  width: 65%;
+  float: left;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.right {
+  width: 10%;
+  float: left;
+  margin-top: 40px;
 }
 
 #randomnum {
