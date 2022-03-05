@@ -2,8 +2,8 @@ window.onload = function() {
 	var canvas = document.getElementById("canvas");
 	var context = canvas.getContext("2d");
 	
-    canvas.width = 800;
-	canvas.height = 600;
+    canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
 	
 	// Set Background Color
     context.fillStyle="#fff";

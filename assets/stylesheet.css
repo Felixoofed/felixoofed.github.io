@@ -8,16 +8,16 @@
   border: none;
 }
 
-.bglessheader {
+.grayheader {
   padding: 10px;
-  background-color: transparent;
+  background-color: #202020;
   font-family: comic;
   color: white;
   font-size: 25px;
   text-align: center;
   border: none;
-  position: absolute;
-  margin: 5px; 
+  width: 100%;
+  position: absolute; 
 }
 
 
@@ -26,8 +26,10 @@
 }
 
 .header2 {
+  margin: 0;
   padding: 5px;
-  width: 900px;
+  position: absolute;
+  width: 100%;
   background: linear-gradient(#ffeb99, #ffd633);
   font-family: comic;
   color: black;
@@ -37,14 +39,16 @@
 }
 
 .colorpick {
-	margin-top: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 #canvas {
-	border-radius: 10px;
-	margin-top: 5px;
-	box-shadow: 0px 0px 5px;
+  width: 100%;
+  height: 100%;
 	padding: 0px;
+  z-index: -9;
 	cursor: crosshair;
 }
 .randomform {
@@ -64,8 +68,8 @@
   text-align: center;
 }
 
-#greenbutton {
-  width: 300%;
+#goto {
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
   font-size: 25px;
@@ -79,8 +83,11 @@
 
 #colorpicker {
   width: 100px;
+  position: absolute;
   height: 100px;
-  margin-top: 10px;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
   border-color: #737373;
   border-style: solid;
   border-width: 5px;
@@ -127,10 +134,14 @@
     width: 100%;
     float: none;
   }
+  .jsLoader {
+    width: 100%;
+    float: none;
+  }
 }
 
 #wip {
-  width: 300%;
+  width: 100%;
   height: auto;
 }
 #MIN {
@@ -145,8 +156,23 @@
   text-align: center;
 }
 
+#jsLoader {
+  margin-left: 10px;
+  border-color: #737373;
+  background-color: #404040;
+  border-style: solid;
+  border-width: 5px;
+  padding: 10px;
+  float: left;
+  color: #ffffff;
+  font-family: ssmbook;
+  font-size: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
 #PAGE {
-  width: 300%;
+  width: 100%;
   border-color: #737373;
   border-style: solid;
   border-width: 5px;
@@ -191,6 +217,7 @@
   font-family: comic;
   color: white;
   text-align: center;
+  float: left;
   border: none;
 }
 
@@ -213,27 +240,48 @@
 .paragraph {
   font-family: comic;
   color: black;
+  padding: 10px;
+  background: linear-gradient(#696969,#313131);
+  border-radius: 10px;
   font-size: 30px;
   text-align: center;
 }
 
-.main {
+.bg {
+  width: 100%; 
+  height: 100%;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  left: 0;
+}
+
+.left {
   width: 65%;
   float: left;
   margin-top: 20px;
   margin-right: 10px;
   margin-left: 10px;
 }
+.main {
+  z-index: 9;
+  width: 100vw;
+  position: fixed;
+}
 
 .right {
-  width: 10%;
   float: left;
-  margin-top: 40px;
+  width: 30%;
+  margin-top: 20px;
+  background: linear-gradient(#696969,#313131);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 #randomnum {
   width: -50%;
   padding: 10px;
+  margin-top: 10px;
   font-family: comic;
   font-size: 25px;
   border-radius: 5px;

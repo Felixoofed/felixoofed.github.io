@@ -6,7 +6,7 @@
 <title>felixoofed's funny little website</title>
 <meta property="og:title" content="felix's funny little website">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content=”assets/embed.png” />
+<meta property="og:image" content=”./assets/embed.png”/>
 <link rel="canonical" href="https://felixoofed.github.io/">
 <meta property="og:url" content="https://felixoofed.github.io/">
 <meta property="og:site_name" content="felixoofed.github.io">
@@ -15,7 +15,7 @@
 <script type="application/ld+json">
 {"url":"https://felixoofed.github.io/","@type":"WebSite","headline":"felixoofed.github.io","name":"felixoofed.github.io","@context":"https://schema.org"}</script>
 <link rel="stylesheet" href="assets/stylesheet.css">
-
+<style>body {margin:0;} </style>
 <script>
 
 function getRandomSentence () {
@@ -53,28 +53,58 @@ var sentences= [
 	'[INSERT SENTENCE HERE]'
 	
 ];
-
 </script>
-</head>
+</head><body>
+	<center><div class="main">
+		<center><div class="header roundcorner" style="margin: 10px;">
+		  <button id="headertext">felix's funny website</button>
+		</div></center>
+		<div class="left">
+			  <center><div class="paragraph">
+				<p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula ipsum ac ipsum blandit euismod. Integer auctor dolor sit amet auctor congue. Ut tempus pretium mauris, id condimentum erat semper id. Nunc dignissim neque orci. Morbi nec turpis eu enim consectetur varius eu eleifend velit.</p>
+			  </div></center>
+		  
+			  <center><div class="buttons">
+				<center-left><button type="button" onclick="document.getElementById('randomnum').innerHTML = 'You got: ' + Math.floor(Math.random() * 100);" id="randomnum">Click me!</button></center-left>
+				<center-right><button type="button" onclick="document.getElementById('paragraph').innerHTML = getRandomSentence();" id="randomsent">Generate a new text</button></center-right>
+			  </div></center>
+		</div>
+		<center><div class="right">
+			<input type="text" id="page"></input>
+			<center><button type="button" onclick="redir(document.getElementById('page').value);" id="goto">Go to page</button></center-left></center>
+			<center><img src="assets/WIP.png" id="wip" alt="It is a"></center>
+		</div></center>
+		</div></center>
 
-<center><div class="header roundcorner">
-  <button id="headertext">felix's funny website</button>
-</div></center>
+<script src="./assets/three.js"></script>
+<script>
+	const scene = new THREE.Scene();
+	const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 10000);
+	const renderer = new THREE.WebGLRenderer();
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	document.body.appendChild(renderer.domElement);
 
-<center><div class="main">
-	  <center><div class="paragraph">
-		<p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula ipsum ac ipsum blandit euismod. Integer auctor dolor sit amet auctor congue. Ut tempus pretium mauris, id condimentum erat semper id. Nunc dignissim neque orci. Morbi nec turpis eu enim consectetur varius eu eleifend velit.</p>
-	  </div></center>
-  
-	  <center><div class="buttons">
-		<center-left><button type="button" onclick="document.getElementById('randomnum').innerHTML = 'You got: ' + Math.floor(Math.random() * 100);" id="randomnum">Click me!</button></center-left>
-		<center-right><button type="button" onclick="document.getElementById('paragraph').innerHTML = getRandomSentence();" id="randomsent">Generate a new text</button></center-right>
-	  </div></center>
-</center></div>
+	renderer.setClearColor( 0xffffff, 0);
 
-<center><div class="right">
-	<input type="text" id="page"></input>
-	<center><button type="button" onclick="redir(document.getElementById('page').value);" id="greenbutton">Go to page</button></center-left></center>
-	<center><img src="assets/WIP.png" id="wip" alt="It is a"></center>
-</div></center>
+	const directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
+	scene.add( directionalLight );
+
+	let cubeGeo = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
+	let material = new THREE.MeshLambertMaterial({color: 0x606060, ambient: 0x505050 ,emissive:0x808080});
+	let cube = new THREE.Mesh( cubeGeo, material);
+	cube.castShadow = true; //default is false
+	cube.receiveShadow = true; //default
+	scene.add(cube);
+
+	camera.position.z = 20;
+
+	function animate() {
+		requestAnimationFrame( animate );
+		cube.rotation.y += 0.03;
+		cube.rotation.x += 0.02;
+		renderer.render( scene, camera );
+	};
+
+	animate();
+</script>
 </body></html>
