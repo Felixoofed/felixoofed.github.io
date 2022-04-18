@@ -26,10 +26,15 @@ var stopI = 0
 var stopSntcs = ['stop, what are you doing', 'i mean it, literally. stop clicking this pointless button', 'I told you to stop, please stop', 'come on, just stop already', 'you really love this button. dont ya?', 'fine. you win, keep clicking that button', "i won't show up anymore"]
 function stop () {
 	stopI += 1
-	if (stopI > 24)
-		alert(stopSntcs[stopI-25])
-		print(stopI-25)
+	print(stopI-25)
+	print(stopSntcs[stopI-25])
+	if (stopI-25 > 1) {
+		if (stopI-25 < stopSntcs.length) {
+			alert(stopSntcs[stopI-25])
+		}
+	}
 }
+	
 function print (str) {
 	console.log(str);
 }
