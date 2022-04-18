@@ -1,0 +1,37 @@
+<html lang="en-US"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>felixoofed's funny little website</title>
+    <meta property="og:title" content="felix's funny little website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content=”https://felixoofed.github.io/assets/embed.png”/>
+    <link rel="canonical" href="https://felixoofed.github.io/">
+    <meta property="og:url" content="https://felixoofed.github.io/">
+    <meta property="og:site_name" content="felixoofed.github.io">
+    <meta name="twitter:card" content="summary">
+    <meta property="twitter:title" content="felixoofed.github.io">
+    <script type="application/ld+json">
+    {"url":"https://felixoofed.github.io/","@type":"WebSite","headline":"felixoofed.github.io","name":"felixoofed.github.io","@context":"https://schema.org"}</script>
+    <link rel="stylesheet" href="../assets/stylesheet.css">
+    </head><body>
+    
+    <center><div class="header roundcorner">
+      <button id="headertext" onclick="window.location.href = 'https://felixoofed.github.io';" >felix's funny website</button>
+    </div></center>
+    <center><div class="main">
+        <p class="paragraph">Use the codes on the page enterer in the <a style = " white-space:nowrap; " href="..">homepage</a> or simply just click on the hyperlinks.</p>
+        <p id="codes" class="paragraph" style="width: 50%;"></p>
+        <p class="paragraph">More coming soon...</p>
+    </div></center>
+    
+    <script>
+        var codes = ['/draw', '/rand']
+        for (var i = 0; i < codes.length; i++) {
+            var code = codes[i]
+            var link = "<a href='".concat("..".concat(code).concat("'")).concat(">".concat(code)).concat("</a>").concat(", ")
+            document.getElementById('codes').innerHTML = document.getElementById('codes').innerHTML.concat(link);
+        }
+    </script>
+    </body></html>

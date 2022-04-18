@@ -69,12 +69,26 @@
 }
 
 #goto {
-  width: 100%;
+  width: 50%;
   padding: 10px;
   border-radius: 5px;
   font-size: 25px;
   font-family: comic;
   background: linear-gradient(#b3ffb3, #4dff4d);
+  text-align: center;
+  border: none;
+  float: none;
+  margin-top: 10px;
+}
+
+
+#code {
+  width: 25%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 150%;
+  font-family: comic;
+  background: linear-gradient(#ff8080, #ff4d4d);
   text-align: center;
   border: none;
   float: none;
@@ -126,18 +140,10 @@
   border: none;
 }
 
-@media only screen and (max-width: 600px) {
-  .right {
-    display: none;
-  }
-  .main {
-    width: 100%;
-    float: none;
-  }
-  .jsLoader {
-    width: 100%;
-    float: none;
-  }
+#iframecontainer {
+  border: none;
+  position: absolute;
+  z-index: -10000;
 }
 
 #wip {
@@ -241,7 +247,7 @@
   font-family: comic;
   color: black;
   padding: 10px;
-  background: linear-gradient(#696969,#313131);
+  background: #e4e4e4;
   border-radius: 10px;
   font-size: 30px;
   text-align: center;
@@ -265,15 +271,18 @@
 }
 .main {
   z-index: 9;
-  width: 100vw;
-  position: fixed;
+  width: 100%;
+  position: relative;
 }
-
+.extra1 {
+  z-index: 9;
+  width: 100%;
+}
 .right {
   float: left;
   width: 30%;
   margin-top: 20px;
-  background: linear-gradient(#696969,#313131);
+  background: #e4e4e4;
   border-radius: 10px;
   padding: 10px;
 }
@@ -314,4 +323,31 @@
 
 @font-face { 
     font-family: ssmbook; src: url('./GothamSSm-Book.otf'); 
+}
+
+@media only screen and (max-width: 1000px) {
+  #code {
+    display: none;
+  }
+  #goto {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 812px) {
+  .right {
+    display: none;
+    float: none;
+  }
+  .left {
+    float: none;
+    width: 100%;
+  }
+  .main {
+    width: 100%;
+    float: none;
+  }
+  .jsLoader {
+    width: 100%;
+    float: none;
+  }
 }

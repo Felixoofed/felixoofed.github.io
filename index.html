@@ -22,7 +22,14 @@ function getRandomSentence () {
     var index= Math.floor(Math.random() * (sentences.length));
     return sentences[index];
 }
-
+var stopI = 0
+var stopSntcs = ['stop, what are you doing', 'i mean it, literally. stop clicking this pointless button', 'I told you to stop, please stop', 'come on, just stop already', 'you really love this button. dont ya?', 'fine. you win, keep clicking that button', "i won't show up anymore"]
+function stop () {
+	stopI += 1
+	if (stopI > 24)
+		alert(stopSntcs[stopI-25])
+		print(stopI-25)
+}
 function print (str) {
 	console.log(str);
 }
@@ -50,8 +57,16 @@ var sentences= [
 	'aodufhawioefhawuoefhaiuwehfajwefnaweklfnawekfnlawkefnlaewknfakfnakjdfnd.',
 	'DID YOU??',
 	'rate 5 stars pls',
-	'[INSERT SENTENCE HERE]'
-	
+	'[INSERT SENTENCE HERE]',
+	'2+2=fish',
+	'everything is a lie',
+	'I am a robot',
+	'I am not a robot',
+	'help github copilot is taking over the sentences',
+	'How do you feel about this?',
+	'https://media.discordapp.net/attachments/925356364862214195/965494712851107890/unknown.png - M2 AIR',
+	'm!!!!! - brixk'
+
 ];
 </script>
 </head><body>
@@ -61,50 +76,22 @@ var sentences= [
 		</div></center>
 		<div class="left">
 			  <center><div class="paragraph">
-				<p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula ipsum ac ipsum blandit euismod. Integer auctor dolor sit amet auctor congue. Ut tempus pretium mauris, id condimentum erat semper id. Nunc dignissim neque orci. Morbi nec turpis eu enim consectetur varius eu eleifend velit.</p>
+				<p id="paragraph"></p>
 			  </div></center>
 		  
-			  <center><div class="buttons">
-				<center-left><button type="button" onclick="document.getElementById('randomnum').innerHTML = 'You got: ' + Math.floor(Math.random() * 100);" id="randomnum">Click me!</button></center-left>
+			  <center><div class="buttons" style="background: #e4e4e4; margin-top: 10px; margin-bottom: 10px; border-radius: 5px;">
+				<center-left><button type="button" style="margin-bottom: 10px;" onclick="document.getElementById('randomnum').innerHTML = 'You got: ' + Math.floor(Math.random() * 100);" id="randomnum">Click me!</button></center-left>
 				<center-right><button type="button" onclick="document.getElementById('paragraph').innerHTML = getRandomSentence();" id="randomsent">Generate a new text</button></center-right>
+				<center-left><img style="margin-bottom: 10px;" src="https://media.discordapp.net/attachments/964814320200474675/965477795188838420/enfionskdfs.gif"></center-left>
 			  </div></center>
+			  <script>document.getElementById('paragraph').innerHTML = getRandomSentence();</script>
 		</div>
 		<center><div class="right">
 			<input type="text" id="page"></input>
-			<center><button type="button" onclick="redir(document.getElementById('page').value);" id="goto">Go to page</button></center-left></center>
+			<center-left><button type="button" onclick="redir(document.getElementById('page').value);" id="goto">Go to page</button></center-left></center-left>
+			<center-right><button type="button" onclick="alert('oops page doesnt exist yet, soz')" id="code">Codes</button></center-right>
 			<center><img src="assets/WIP.png" id="wip" alt="It is a"></center>
+			<center><button type="button" onclick="stop()" style="font-size:25px; font-family:comic; padding: 25px; border-radius: 5px;">>>> pointless button <<<</button></center>
 		</div></center>
 		</div></center>
-
-<script src="./assets/three.js"></script>
-<script>
-	const scene = new THREE.Scene();
-	const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 10000);
-	const renderer = new THREE.WebGLRenderer();
-	renderer.setSize( window.innerWidth, window.innerHeight );
-	document.body.appendChild(renderer.domElement);
-
-	renderer.setClearColor( 0xffffff, 0);
-
-	const directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
-	scene.add( directionalLight );
-
-	let cubeGeo = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
-	let material = new THREE.MeshLambertMaterial({color: 0x606060, ambient: 0x505050 ,emissive:0x808080});
-	let cube = new THREE.Mesh( cubeGeo, material);
-	cube.castShadow = true; //default is false
-	cube.receiveShadow = true; //default
-	scene.add(cube);
-
-	camera.position.z = 20;
-
-	function animate() {
-		requestAnimationFrame( animate );
-		cube.rotation.y += 0.03;
-		cube.rotation.x += 0.02;
-		renderer.render( scene, camera );
-	};
-
-	animate();
-</script>
 </body></html>
