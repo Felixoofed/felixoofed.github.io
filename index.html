@@ -102,7 +102,7 @@ function redir (argument) {
 			  <center><div class="buttons" style="background: #e4e4e4; margin-top: 10px; margin-bottom: 10px; border-radius: 5px;">
 				<center-left><button type="button" style="margin-bottom: 10px;" onclick="document.getElementById('randomnum').innerHTML = 'You got: ' + Math.floor(Math.random() * 100);" id="randomnum">Click me!</button></center-left>
 				<center-right><button type="button" onclick="document.getElementById('paragraph').innerHTML = getRandomSentence();" id="randomsent">Generate a new text</button></center-right>
-				<center-left><img style="margin-bottom: 20px;" src="https://media.discordapp.net/attachments/964814320200474675/965477795188838420/enfionskdfs.gif"></center-left>
+				<center-left><video controls="" autoplay="" name="media"><source src="https://tryitands.ee/tias.mp4" type="video/mp4"></video></center-left>
 			  </div></center>
 			  <script>document.getElementById('paragraph').innerHTML = getRandomSentence();</script>
 		</div>
@@ -112,11 +112,10 @@ function redir (argument) {
 			<center-right><button type="button" onclick="redir('./codes')" id="code">Codes</button></center-right>
 			<center><img src="assets/WIP.png" id="wip" alt="It is a"></center>
 			<center><button type="button" onclick="stop()" style="font-size:25px; font-family:comic; padding: 25px; border-radius: 5px;">>>> pointless button <<<</button></center>
-			<center><button type="button" onclick="document.getElementById('sentence').innerHTML = sentence();" style="font-size:25px; font-family:comic; padding: 25px; margin: 10px; border-radius: 5px;">generate a new sentence</button></center>
+			<center><button type="button" onclick="document.getElementById('paragraph').innerHTML = sentence();" style="font-size:25px; font-family:comic; padding: 25px; margin: 10px; border-radius: 5px;">generate a new sentence</button></center>
 		</div></center>
 		<center><div class="bottom" style="margin: 10px;">
-			  <p id="sentence" style="font-size: 25px; font-family:comic; padding: 20px; width: 80%; display: flex; background:#e4e4e4; border-radius:5px;"></button>
-			  <script>document.getElementById("sentence").innerHTML = sentence();</script>
+			  <p id="sentence" style="font-size: 25px; font-family:comic; padding: 20px; width: 80%; display: flex; background:#e4e4e4; border-radius:5px; font-align: center;">felixoofed 2022, video from tryitands.ee (i don't own that)</p>
 		</div></center>
 		</div></center> 
 </body></html>
