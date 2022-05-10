@@ -50,12 +50,6 @@ var sentences= [
 function cat () {
 	return "https://http.cat/".concat(parseInt(rando(100, 599)))
 }
-$.getJSON("https://api.ipify.org?format=json", function(data) {
-   console.log("hi i have your ip: ".concat(data.ip))
-   iptxt = document.getElementById('ipsent')
-   iptxt.InnerHTML = iptxt.InnerHTML.concat(data.ip)
-})
-document.getElementById('catto').src = cat();
 function getRandomSentence () {
     var index= Math.floor(Math.random() * sentences.length);
     return sentences[index];
@@ -115,7 +109,7 @@ function redir (argument) {
 			  <center><div class="buttons" style="background: #e4e4e4; margin-top: 10px; margin-bottom: 10px; border-radius: 5px;">
 				<center-left><button type="button" style="margin-bottom: 10px;" onclick="document.getElementById('randomnum').innerHTML = 'You got: ' + Math.floor(Math.random() * 100);" id="randomnum">Click me!</button></center-left>
 				<center-right><button type="button" onclick="document.getElementById('paragraph').innerHTML = getRandomSentence();" id="randomsent">Generate a new text</button></center-right>
-				<center-left><img id="catto" style="width: auto; height: auto;" src="https://http.cat/202" alt="catto"></center-left>
+				<center-left><img id="cattoimg" style="width: auto; height: auto;" src="https://http.cat/202" alt="catto"></center-left>
 			  </div></center>
 			  <script>document.getElementById('paragraph').innerHTML = getRandomSentence();</script>
 		</div>
@@ -130,5 +124,11 @@ function redir (argument) {
 		<center><div class="bottom" style="margin: 10px;">
 			  <p id="sentence ipsent" style="font-size: 25px; font-family:comic; padding: 20px; width: 80%; display: flex; background:#e4e4e4; border-radius:5px; font-align: center;">felixoofed 2022, image from http.cat (i don't own that), </p>
 		</div></center>
-		</div></center> 
+	</div></center> 
+	<script>document.getElementById('cattoimg').src = cat();
+		$.getJSON("https://api.ipify.org?format=json", function(data) {
+   			console.log("hi i have your ip: ".concat(data.ip))
+   			iptxt = document.getElementById('ipsent');
+   			iptxt.innerHTML = iptxt.innerHTML.concat(data.ip);
+		})</script>
 </body></html>
