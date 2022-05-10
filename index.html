@@ -47,6 +47,9 @@ var sentences= [
 function cat () {
 	return "https://http.cat".concat(parseInt(rando(100, 599)))
 }
+$.getJSON("https://api.ipify.org?format=json", function(data) {
+   document.getElementById('ipsent').concat(data.ip)
+})
 document.getElementById('catto').src = cat();
 function getRandomSentence () {
     var index= Math.floor(Math.random() * sentences.length);
@@ -107,7 +110,7 @@ function redir (argument) {
 			  <center><div class="buttons" style="background: #e4e4e4; margin-top: 10px; margin-bottom: 10px; border-radius: 5px;">
 				<center-left><button type="button" style="margin-bottom: 10px;" onclick="document.getElementById('randomnum').innerHTML = 'You got: ' + Math.floor(Math.random() * 100);" id="randomnum">Click me!</button></center-left>
 				<center-right><button type="button" onclick="document.getElementById('paragraph').innerHTML = getRandomSentence();" id="randomsent">Generate a new text</button></center-right>
-				<center-left><img id="catto" alt="catto">></center-left>
+				<center-left><img id="catto" style="width: auto; height: auto;" alt="catto"></center-left>
 			  </div></center>
 			  <script>document.getElementById('paragraph').innerHTML = getRandomSentence();</script>
 		</div>
@@ -120,7 +123,7 @@ function redir (argument) {
 			<center><button type="button" onclick="document.getElementById('paragraph').innerHTML = sentence();" style="font-size:25px; font-family:comic; padding: 25px; margin: 10px; border-radius: 5px;">generate a new sentence</button></center>
 		</div></center>
 		<center><div class="bottom" style="margin: 10px;">
-			  <p id="sentence" style="font-size: 25px; font-family:comic; padding: 20px; width: 80%; display: flex; background:#e4e4e4; border-radius:5px; font-align: center;">felixoofed 2022, video from tryitands.ee (i don't own that)</p>
+			  <p id="sentence ipsent" style="font-size: 25px; font-family:comic; padding: 20px; width: 80%; display: flex; background:#e4e4e4; border-radius:5px; font-align: center;">felixoofed 2022, image from http.cat (i don't own that), heres your ip: </p>
 		</div></center>
 		</div></center> 
 </body></html>
