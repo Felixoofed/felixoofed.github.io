@@ -15,6 +15,9 @@
 <script type="application/ld+json">
 {"url":"https://felixoofed.github.io/","@type":"WebSite","headline":"felixoofed.github.io","name":"felixoofed.github.io","@context":"https://schema.org"}</script>
 <link rel="stylesheet" href="assets/stylesheet.css">
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
 <style>body {margin:0;} </style>
 <script src="https://randojs.com/2.0.0.js"></script>
 <script>
@@ -45,7 +48,7 @@ var sentences= [
 ];
 
 function cat () {
-	return "https://http.cat".concat(parseInt(rando(100, 599)))
+	return "https://http.cat/".concat(parseInt(rando(100, 599)))
 }
 $.getJSON("https://api.ipify.org?format=json", function(data) {
    document.getElementById('ipsent').concat(data.ip)
