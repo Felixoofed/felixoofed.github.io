@@ -16,6 +16,7 @@
 {"url":"https://felixoofed.github.io/","@type":"WebSite","headline":"felixoofed.github.io","name":"felixoofed.github.io","@context":"https://schema.org"}</script>
 <link rel="stylesheet" href="assets/stylesheet.css">
 <style>body {margin:0;} </style>
+<script src="https://randojs.com/2.0.0.js"></script>
 <script>
 
 
@@ -43,6 +44,10 @@ var sentences= [
 	'm!!!!! - brixk'
 ];
 
+function cat () {
+	return "https://http.cat".concat(parseInt(rando(100, 599)))
+}
+document.getElementById('catto').src = cat();
 function getRandomSentence () {
     var index= Math.floor(Math.random() * sentences.length);
     return sentences[index];
@@ -102,7 +107,7 @@ function redir (argument) {
 			  <center><div class="buttons" style="background: #e4e4e4; margin-top: 10px; margin-bottom: 10px; border-radius: 5px;">
 				<center-left><button type="button" style="margin-bottom: 10px;" onclick="document.getElementById('randomnum').innerHTML = 'You got: ' + Math.floor(Math.random() * 100);" id="randomnum">Click me!</button></center-left>
 				<center-right><button type="button" onclick="document.getElementById('paragraph').innerHTML = getRandomSentence();" id="randomsent">Generate a new text</button></center-right>
-				<center-left><video controls="" autoplay="" name="media"><source src="https://tryitands.ee/tias.mp4" type="video/mp4"></video></center-left>
+				<center-left><img id="catto" alt="catto">></center-left>
 			  </div></center>
 			  <script>document.getElementById('paragraph').innerHTML = getRandomSentence();</script>
 		</div>
