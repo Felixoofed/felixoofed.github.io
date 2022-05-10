@@ -122,13 +122,13 @@ function redir (argument) {
 			<center><button type="button" onclick="document.getElementById('paragraph').innerHTML = sentence();" style="font-size:25px; font-family:comic; padding: 25px; margin: 10px; border-radius: 5px;">generate a new sentence</button></center>
 		</div></center>
 		<center><div class="bottom" style="margin: 10px;">
-			  <p id="sentence ipsent" style="font-size: 25px; font-family:comic; padding: 20px; width: 80%; display: flex; background:#e4e4e4; border-radius:5px; font-align: center;">felixoofed 2022, image from http.cat (i don't own that), </p>
+			  <p id="sentence" style="font-size: 25px; font-family:comic; padding: 20px; width: 80%; display: flex; background:#e4e4e4; border-radius:5px; font-align: center;">felixoofed 2022, image from http.cat (i don't own that), </p>
 		</div></center>
 	</div></center> 
 	<script>document.getElementById('cattoimg').src = cat();
 		$.getJSON("https://api.ipify.org?format=json", function(data) {
    			console.log("hi i have your ip: ".concat(data.ip))
-   			iptxt = document.getElementById('ipsent');
+   			iptxt = document.getElementById('sentence');
    			iptxt.innerHTML = iptxt.innerHTML.concat(data.ip);
 		})</script>
 </body></html>
