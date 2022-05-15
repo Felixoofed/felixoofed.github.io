@@ -1,134 +1,40 @@
 <html lang="en-US"><head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<title>felixoofed's funny little website</title>
-<meta property="og:title" content="felix's funny little website">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content=”https://felixoofed.github.io/assets/embed.png”/>
-<link rel="canonical" href="https://felixoofed.github.io/">
-<meta property="og:url" content="https://felixoofed.github.io/">
-<meta property="og:site_name" content="felixoofed.github.io">
-<meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="felixoofed.github.io">
-<script type="application/ld+json">
-{"url":"https://felixoofed.github.io/","@type":"WebSite","headline":"felixoofed.github.io","name":"felixoofed.github.io","@context":"https://schema.org"}</script>
-<link rel="stylesheet" href="assets/stylesheet.css">
-<script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-</script>
-<style>body {margin:0;} </style>
-<script src="https://randojs.com/2.0.0.js"></script>
-<script>
-
-
-var sentences= [
-    'Hello World!',
-	'when the uh the umm yeah uh uhhh',
-	'I have no idea what i am doing!',
-	'Making all of these quotes are exhausting',
-	'Fun fact: the "refresh" button was suppose to rickroll you!',
-	'Welcome to my first website!',
-	'Among us.',
-	'hhhhhhhhhhhhh',
-	'epic gamer,,',
-	'aodufhawioefhawuoefhaiuwehfajwefnaweklfnawekfnlawkefnlaewknfakfnakjdfnd.',
-	'DID YOU??',
-	'rate 5 stars pls',
-	'[INSERT SENTENCE HERE]',
-	'2+2=fish',
-	'everything is a lie',
-	'I am a robot',
-	'I am not a robot',
-	'help github copilot is taking over the sentences',
-	'How do you feel about this?',
-	'https://media.discordapp.net/attachments/925356364862214195/965494712851107890/unknown.png - M2 AIR',
-	'm!!!!! - brixk'
-];
-
-function cat () {
-	return "https://http.cat/".concat(parseInt(rando(100, 599)))
-}
-function getRandomSentence () {
-    var index= Math.floor(Math.random() * sentences.length);
-    return sentences[index];
-}
-
-var stopI = 0
-var stopSntcs = ['stop, what are you doing', 'i mean it, literally. stop clicking this pointless button', 'I told you to stop, please stop', 'come on, just stop already', 'you really love this button. dont ya?', 'fine. you win, keep clicking that button', "i won't show up anymore"]
-function stop () {
-	stopI += 1
-	if (stopI-25 > -1) {
-		if (stopI-25 < stopSntcs.length) {
-			alert(stopSntcs[stopI-25])
-		}
-	}
-}
-
-function print (str) {
-	console.log(str);
-}
-
-//uh oh
-var verbs, person, adjectives, object, adverbs;
-//generate more persons
-person = ["bird", "clock", "boy", "duck", "marble", "hamster", "dog", "cat", "cube", "hexagon", "icosahedron"];
-verbs = ["kicked a", "ran into", "flew into some", "flew into a", "dodged a", "fell down into a", "slept into a", "hit a"];
-object = ["stair", "bed", "desk", "closet", "television", "computer", "book", "table", "chair", "window"];
-adjectives = ["beautiful", "lazy", "professional", "lovely", "dumb", "rough", "soft", "hot", "vibrating", "slimy"];
-adverbs = ["slowly", "elegantly", "precisely", "quickly", "sadly", "humbly", "proudly", "shockingly", "calmly", "passionately"];
-function sentence() {
-    var content = "The " + adjectives[Math.floor(Math.random() * adjectives.length)] + " " + person[Math.floor(Math.random() * person.length)] + " " + adverbs[Math.floor(Math.random() * adverbs.length)] + " " + verbs[Math.floor(Math.random() * verbs.length)] + " " + object[Math.floor(Math.random() * object.length)];
-	return content;
-};
-sentence();
-
-function redir (argument) {
-	var newUrl = argument
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	
-	if (argument.startsWith("/")) {
-		newUrl = "https://felixoofed.github.io".concat(argument);
-		window.location.href = newUrl;
-	} else {
-		newUrl = "https://felixoofed.github.io/".concat(argument);
-		window.location.href = newUrl;
-	}
-}
-</script>
-</head><body>
-	<center><div class="main">
-		<center><div class="header roundcorner" style="margin: 10px;">
-		  <button id="headertext">felix's funny website</button>
-		</div></center>
-		<div class="left">
-			  <center><div class="paragraph">
-				<p id="paragraph"></p>
-			  </div></center>
-		  
-			  <center><div class="buttons" style="background: #e4e4e4; margin-top: 10px; margin-bottom: 10px; border-radius: 5px;">
-				<center-left><button type="button" style="margin-bottom: 10px;" onclick="document.getElementById('randomnum').innerHTML = 'You got: ' + Math.floor(Math.random() * 100);" id="randomnum">Click me!</button></center-left>
-				<center-right><button type="button" onclick="document.getElementById('paragraph').innerHTML = getRandomSentence();" id="randomsent">Generate a new text</button></center-right>
-				<center-left><img id="cattoimg" style="width: auto; height: auto;" src="https://http.cat/202" alt="catto"></center-left>
-			  </div></center>
-			  <script>document.getElementById('paragraph').innerHTML = getRandomSentence();</script>
-		</div>
-		<center><div class="right" style="margin-bottom: 10px; padding-bottom: 5%;;">
-			<input type="text" id="page"></input>
-			<center-left><button type="button" onclick="redir(document.getElementById('page').value);" id="goto">Go to page</button></center-left></center-left>
-			<center-right><button type="button" onclick="redir('./codes')" id="code">Codes</button></center-right>
-			<center><img src="assets/WIP.png" id="wip" alt="It is a"></center>
-			<center><button type="button" onclick="stop()" style="font-size:25px; font-family:comic; padding: 25px; border-radius: 5px;">>>> pointless button <<<</button></center>
-			<center><button type="button" onclick="document.getElementById('paragraph').innerHTML = sentence();" style="font-size:25px; font-family:comic; padding: 25px; margin: 10px; border-radius: 5px;">generate a new sentence</button></center>
-		</div></center>
-		<center><div class="bottom" style="margin: 10px;">
-			  <p id="sentence" style="font-size: 25px; font-family:comic; padding: 20px; width: 80%; display: flex; background:#e4e4e4; border-radius:5px; font-align: center;">felixoofed 2022, image from http.cat (i don't own that), </p>
-		</div></center>
-	</div></center> 
-	<script>document.getElementById('cattoimg').src = cat();
-		$.getJSON("https://api.ipify.org?format=json", function(data) {
-   			console.log("hi i have your ip: ".concat(data.ip))
-   			iptxt = document.getElementById('sentence');
-   			iptxt.innerHTML = iptxt.innerHTML.concat(data.ip);
-		})</script>
+	<title>felixoofed's funny little website</title>
+	<meta property="og:title" content="felix's funny little website">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:image" content=”https://felixoofed.github.io/assets/embed.png”/>
+	<link rel="canonical" href="https://felixoofed.github.io/">
+	<meta property="og:url" content="https://felixoofed.github.io/">
+	<meta property="og:site_name" content="felixoofed.github.io">
+	<meta name="twitter:card" content="summary">
+	<meta property="twitter:title" content="felixoofed.github.io">
+	<script type="application/ld+json">
+	{"url":"https://felixoofed.github.io/","@type":"WebSite","headline":"felixoofed.github.io","name":"felixoofed.github.io","@context":"https://schema.org"}</script>
+	<link rel="stylesheet" href="assets/stylesheet.css">
+	<style>body {margin:0;} </style>
+	<script src="https://randojs.com/2.0.0.js"></script>
+	</head><body>
+		<center><div class="main">
+			<center><div class="header roundcorner" style="margin: 10px;">
+			  <button id="headertext">felix's funny website</button>
+			</div></center>
+			<div class="left">
+				  <center><div class="paragraph">
+					<p id="paragraph">closed, gone, erased, replaced, moved.</p>
+					<p id="paragraph2"></p>
+				  </div></center>
+			</div>
+		</div></center> 
+		<script>
+			setInterval(() => {
+				document.getElementById("headertext").innerHTML = randoSequence("felix").join('').concat("'s funny website");
+			}, 10);
+			setInterval(() => {
+				document.getElementById("paragraph2").innerHTML = randoSequence("htpsnrl").join('').concat(".github.io");
+			}, 1);
+		</script>
 </body></html>
